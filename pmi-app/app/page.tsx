@@ -5,7 +5,7 @@ export default function AntigravityApp() {
   const initialState = { pv: 0, ev: 0, ac: 0, bac: 0 };
   const [values, setValues] = useState(initialState);
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setValues({ ...values, [name]: parseFloat(value) || 0 });
   };
