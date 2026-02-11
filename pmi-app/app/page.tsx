@@ -68,7 +68,7 @@ export default function AntigravityApp() {
           ].map((i) => (
             <div key={i.name} className={`bg-white p-5 rounded-xl shadow-sm border-t-4 ${i.b}`}>
               <label className="block text-[10px] font-black text-slate-500 uppercase mb-1 tracking-widest">{i.label}</label>
-              <input type="number" name={i.name} value={values[i.name] === 0 ? '' : values[i.name]} onChange={handleChange} className="w-full text-2xl font-bold focus:outline-none bg-transparent" placeholder="0" />
+              <input type="number" name={i.name} value={values[i.name as keyof typeof values] === 0 ? '' : values[i.name as keyof typeof values]} onChange={handleChange} className="w-full text-2xl font-bold focus:outline-none bg-transparent" placeholder="0" />
             </div>
           ))}
         </section>
